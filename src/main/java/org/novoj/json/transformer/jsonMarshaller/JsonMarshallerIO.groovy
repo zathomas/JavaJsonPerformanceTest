@@ -20,7 +20,7 @@ class JsonMarshallerIO implements JsonIO {
 		return o.toString();
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		Json.Value o = Json.fromString(json)
 		return marshaller.unmarshall(o, json)
 	}

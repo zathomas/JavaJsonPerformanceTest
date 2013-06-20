@@ -18,7 +18,7 @@ class JsonSmartIO implements JsonIO {
 		return result.toString()
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return JSONValue.parse(json, PhotoAlbum.class)
 	}
 

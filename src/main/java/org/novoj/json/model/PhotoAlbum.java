@@ -7,6 +7,8 @@ import net.minidev.json.annotate.JsonIgnore;
 import org.novoj.json.transformer.jsonMarshaller.DateMarshaller;
 
 import javax.xml.bind.annotation.XmlRootElement;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Date;
 import java.util.List;
 
@@ -79,4 +81,14 @@ public class PhotoAlbum {
 	public void setPhotos(List<Photo> photos) {
 		this.photos = photos;
 	}
+
+  public Object get(String key) throws InvocationTargetException, IllegalAccessException {
+    Method[] methods = this.getClass().getDeclaredMethods();
+    for(Method method : methods) {
+      if (method.getName().equalsIgnoreCase("get" + key)) {
+        return method.invoke(this, null);
+      }
+    }
+    throw new UnsupportedOperationException("No property by that name: " + key);
+  }
 }

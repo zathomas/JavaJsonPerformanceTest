@@ -28,7 +28,7 @@ class FlexJsonIO implements JsonIO {
 		return serializer.serialize( photoAlbum )
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return deserializer.deserialize( json, PhotoAlbum.class );
 	}
 

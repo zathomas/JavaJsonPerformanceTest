@@ -17,7 +17,7 @@ class GsonIO implements JsonIO {
 		return gson.toJson(photoAlbum);
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return gson.fromJson(json, PhotoAlbum.class)
 	}
 

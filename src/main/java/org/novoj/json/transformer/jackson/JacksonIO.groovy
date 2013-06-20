@@ -17,7 +17,7 @@ class JacksonIO implements JsonIO {
 		return mapper.writeValueAsString(photoAlbum)
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return mapper.readValue(json, PhotoAlbum.class)
 	}
 

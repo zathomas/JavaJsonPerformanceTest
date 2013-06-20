@@ -25,7 +25,7 @@ class StaxonOverJacksonIO implements JsonIO {
 		return sw.toString();
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return mapper.readObject(new StringReader(json))
 	}
 

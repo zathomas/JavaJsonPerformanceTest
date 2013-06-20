@@ -26,7 +26,7 @@ class XStreamIO implements JsonIO {
 		return xstream.toXML(photoAlbum)
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return (PhotoAlbum)xstream.fromXML(json);
 	}
 

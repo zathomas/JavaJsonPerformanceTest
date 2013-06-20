@@ -24,7 +24,7 @@ class JsonLibIO implements JsonIO {
 		return jsonObj.toString()
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		JSONObject jsonObj = JSONObject.fromObject(json, config)
 		return JSONObject.toBean(jsonObj, PhotoAlbum.class)
 	}

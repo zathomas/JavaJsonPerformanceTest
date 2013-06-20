@@ -12,6 +12,6 @@ interface JsonIO {
 
 	String serializePhotoAlbum(PhotoAlbum photoAlbum);
 
-	PhotoAlbum deserializePhotoAlbum(String json);
+	Object deserializePhotoAlbum(String json);
 
 }

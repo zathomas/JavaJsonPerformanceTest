@@ -25,7 +25,7 @@ class ProtostuffIO implements JsonIO {
 		return out.toString()
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		StringReader source = new StringReader(json)
 		PhotoAlbum album = new PhotoAlbum()
 		JsonIOUtil.mergeFrom(source, album, schema, true)

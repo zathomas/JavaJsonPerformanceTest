@@ -16,7 +16,7 @@ class FastJsonIO implements JsonIO {
 		return JSON.toJSONString(photoAlbum)
 	}
 
-	PhotoAlbum deserializePhotoAlbum(String json) {
+	Object deserializePhotoAlbum(String json) {
 		return JSON.parseObject(json, PhotoAlbum.class);
 	}
 
